@@ -4,11 +4,9 @@ import Card from './Card';
 
 const AlbumDetail = ({ album }) => {
   return (
-    <View>
-      <Card>
-        <Text>{album.title}</Text>
-      </Card>
-    </View>
+    <Card>
+      <Text>{album.title}</Text>
+    </Card>
   );
 };
 
