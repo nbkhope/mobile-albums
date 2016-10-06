@@ -11,7 +11,11 @@ class AlbumList extends Component {
   };
 
   componentWillMount() {
-    axios.get('https://rallycoding.herokuapp.com/api/music_albums')
+    //const API_URL = 'https://mobile-albums.firebaseio.com/albums.json';
+    const API_URL = 'https://rallycoding.herokuapp.com/api/music_albums';
+    const API_KEY = 'QFJgbXHThymKRO4IfrgRqP4j7yLIurYlgs5gfQpq';
+
+    axios.get(`${API_URL}?auth=${API_KEY}`)
       .then((response) => {
         console.log(response);
         this.setState({ albums: response.data });
